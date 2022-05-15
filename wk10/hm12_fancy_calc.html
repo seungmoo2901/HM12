@@ -12,38 +12,64 @@
         margin-top: 4px;
         font-size: 20px;
         background-color: #ffffff;
-        border-radius: 50%;
+       
       }
       input#display{
         color: black;
-        background-color: #99ffcc;
+        background-color: #c099ff;
         font-size: 30px;
         text-align: center;
-        border-radius: 50%;
-        text-shadow: 3px 3px 5px blueviolet;
+      
+        text-shadow: 3px 3px 5px rgb(238, 96, 96);
       }
       input#num{
-        background-color: #ffff66;
-        font-weight: bold;
-        border-radius: 50%;
-        text-shadow: 3px 3px 5px orange;
-      }
-      input#op{
-        background-color: #ff9900;
+        background-color: navajowhite;
+        color: blueviolet;
         font-weight: bold;
         border-radius: 50%;
         text-shadow: 3px 3px 5px red;
       }
+      input#op{
+        background-color: yellow;
+        color: brown;
+        font-weight: bold;
+        border-radius: 50%;
+        text-shadow: 3px 3px 5px aqua;
+      }
       input#clear{
         background-color: #00ffff;
-        border-radius: 50%;
+        color: black;
+        font-size: 20px;
         text-shadow: 3px 3px 5px blue;
       }
       input#enter{
         background-color: #00ffff;
-        border-radius: 50%;
+        color: black;
+        font-size: 20px;
         text-shadow: 3px 3px 5px blue;
       }
+      input#jinsu{
+        background-color: pink;
+        color: black;
+        border-radius: 50%;
+        font-size: 20px;
+        text-shadow: 3px 3px 5px rgb(0, 255, 179);
+      }
+      #num:hover{
+      background:skyblue;
+      }
+      #op:hover{
+      background:greenyellow;
+      }
+      #clear:hover{
+      background:rgb(127, 233, 150);
+      }
+      #enter:hover{
+      background:rgb(127, 233, 150);
+      }
+      #jinsu:hover{
+      background:rgb(107, 33, 204);
+    }
     </style>
     <script>
       var expression = "";
@@ -67,11 +93,29 @@ document.getElementById("display").value = expression;
 }
 function clearDisplay() {
 expression = "";
-document.getElementById("display").value = "0";
+document.getElementById("display").value = expression;
 }
 function isInteger(x) {
 return Math.floor(x) === x;
 }
+
+function hex() {
+        var expression_num = parseInt(eval(expression));
+          expression = expression_num.toString(16);
+        document.getElementById("display").value = expression;
+      }
+      function oct() {
+        var expression_num = parseInt(eval(expression));
+          expression = expression_num.toString(8);
+        document.getElementById("display").value = expression;
+      }
+      function bin() {
+        var expression_num = parseInt(eval(expression));
+          expression = expression_num.toString(2);
+        document.getElementById("display").value = expression;
+      }
+    
+      
     </script>
   </head>
 
@@ -103,11 +147,20 @@ return Math.floor(x) === x;
         <input id="num" type="button" value="    .    " onclick="add('.')" />
         <input id="op" type="button" value="    +    " onclick="add('+')" />
         <input id="op" type="button" value="    %    " onclick="add('%')" />
+        <input id="op" type="button" value="    π    " onclick="add('3.14')" />
+        <input id="op" type="button" value="    (   " onclick="add('(')" />
+        <input id="op" type="button" value="    )   " onclick="add(')')" />
+       
         <br />
         <input id="clear" type="button" value="Clear"onclick="clearDisplay()"/>
         <input id="enter" type="button" value="Enter"  name="enter" onclick="compute()"/>
+        <input id="jinsu" type="button" value=" 16진수 " onclick="hex()"/>
+        <input id="jinsu" type="button" value="  8진수 " onclick="oct()" />
+        <input id="jinsu" type="button" value="  2진수 " onclick="bin()" />
+        
+        
       </form>
-      <h4>COMSI, HMxx</h4>
+      <h4>COMSI, HM12</h4>
     </div>
   </body>
 </html>
