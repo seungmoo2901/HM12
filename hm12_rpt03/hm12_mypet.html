@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm12 : Javascript Event</title>
+    <style></style>
+    <script>
+      // 미리 로딩해둘 이미지 이름 배열
+      var files = [
+      "media/mydog1.jpg",
+      "media/mydog2.jpg",
+      "media/mydog3.jpg",
+      "media/mydog4.jpg",
+      "media/mydog5.jpg"
+      ];
+      var imgs = new Array();
+      for (var i = 0; i<files.length; i++) {
+        imgs[i] = new Image(); // 메모리에 이미지 객체 생성
+        imgs[i].src = files[i]; // 이미지 로딩
+      }
+
+      // 다음 이미지 출력
+      var next = 1;
+      function change(img) {
+        img.src = imgs[next].src; // 이미지 변경
+        next++; // 다음 이미지
+        next %= imgs.length; // 개수를 넘으면 처음으로
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3 style="font-size: 30px; text-align: center;">우리 집 강아지 : 호두</h3>
+    <hr>
+    <p>
+      <img
+        style="border:20px ridge wheat"
+        src="media/mydog1.jpg",
+        alt="."
+        width="300"
+        height="450"
+        onclick="change(this)"
+      />
+     <p style="font-size: 20px;">견종:푸들</p> 
+      <p style="font-size: 20px;">성별:여</p>
+    <p style="font-size: 20px;">나이:2살</p>
+    </p>
+  </body>
+</html>

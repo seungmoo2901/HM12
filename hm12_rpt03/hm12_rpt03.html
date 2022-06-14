@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+
+<head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8">
+    <title>hm12 : final exam</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .header {
+            width: 100%;
+            height: 15%;
+            background: white;
+        }
+
+        .nav {
+            width: 20%;
+            height: 100%;
+            float: left;
+            background: greenyellow;
+        }
+
+        .section {
+            width: 60%;
+            height: 100%;
+            float: left;
+            background: aquamarine;
+        }
+
+        .aside {
+            width: 20%;
+            height: 100%;
+            float: left;
+            background: #ffe5b2;
+        }
+
+        .footer {
+            width: 100%;
+            height: 15%;
+            clear: both;
+            background: rgb(204, 115, 56);
+        }
+
+        
+
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main-menu > li {
+  float: left;
+  position: relative;
+}
+
+#main-menu > li > a {
+  font-size: 20px;
+  color: rgba(47, 49, 9, 0.85);
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  display: block;
+  padding: 50px 35px;
+  border-right: 1px solid rgba(0,0,0,0.15);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+#main-menu > li:nth-child(1) > a {
+  border-left: 1px solid rgba(0,0,0,0.15);
+}
+
+#sub-menu {
+  position: absolute;
+  background: #182952;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.15s ease-in;
+  font-size: 15px;
+}
+
+#sub-menu > li {
+  padding: 40px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+#sub-menu > li >  a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+}
+
+#main-menu > li:hover #sub-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+#sub-menu > li >  a:hover {
+ text-decoration: underline;
+}
+
+        #menu {float: right;}
+        #menu li {list-style-type: none; padding: 0px 15px; float: left;}
+      #menu li a {display: block; line-height: 75px; color: black; padding: 0 15px; text-decoration: none;}
+      #main-menu li a:hover {color: #64db92;}
+
+    </style>
+    <script></script>
+</head>
+<body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <header class="header">
+        <h1>나는 누구인가? : HM12</h1>
+        <nav id="main-menu">
+            <li><a href="hm12_welcome.html" target="right">Home</a></li>
+            <li><a href="hm12_info.html" target="right">자기소개</a></li>
+            <li><a href="hm12_day.html" target="right">하루일과</a></li>
+            <li><a href="hm12_best3.html" target="bottom">My Best 3</a>
+                <ul id="sub-menu">
+                  <li><a href="hm12_movie1.html" target="bottom" aria-label="subemnu">범죄도시2</a></li>
+                  <li><a href="hm12_movie2.html" target="bottom" aria-label="subemnu">닥터스트레인지-대혼돈의멀티버스</a></li>
+                  <li><a href="hm12_movie1.html" target="bottom" aria-label="subemnu">쥬라기월드-도미니언</a></li>
+                
+                </ul>
+            <li><a href="hm12_card.html" target="right">X-mas card</a></li>
+            <li><a href="hm12_form.html" target="right">동호회모집</a></li>
+            <li><a href="hm12_NOWAR.html" target="right">전쟁을 멈춰주세요</a></li>
+            <li><a href="hm12_hotplace.html" target="right">김해 가볼만한곳</a></li>
+            <li><a href="hm12_best3.html" target="bottom">즐겨찾기</a>
+              <ul id="sub-menu">
+                <li><a href="https://www.koreabaseball.com/" target="bottom" aria-label="subemnu">야구경기일정</a></li>
+                <li><a href="https://www.lottecinema.co.kr/NLCHS" target="bottom" aria-label="subemnu">영화예매</a></li>
+                <li><a href="https://news.naver.com/" target="bottom" aria-label="subemnu">뉴스</a></li>
+                <li><a href="https://www.inje.ac.kr/kor/main/main.asp" target="bottom" aria-label="subemnu">인제대학교</a></li>
+                <li><a href="https://www.kosaf.go.kr/ko/main.do" target="bottom" aria-label="subemnu">한국장학재단</a></li>
+               <li> <a href="https://github.com/seungmoo2901/HM12"target="bottom" aria-label="subemnu">나의깃허브</a></li>
+              </ul>
+            <li><a href="hm12_give.html" target="right">후원하기</a></li>
+        </nav>
+    </header>
+    
+    <nav class="nav">
+        <iframe
+                src="hm12_mypet.html"
+                name="left"
+                width="400"
+                height="950">
+               
+             
+            </iframe>
+            
+    </nav>
+
+    <section class="section" id="main">
+        
+        <article>
+                <iframe
+                src="hm12_welcome.html"
+                name="right"
+                width="1200"
+                height="950"
+              ></iframe>				
+    </section>
+    
+    <aside class="aside">
+      
+      <iframe
+      src="hm12_calculator.html"
+      name="right"
+      width="400"
+      height="900"
+    ></iframe>		
+        
+        </aside>
+    
+    <footer class="footer">
+      <iframe
+      src="hm12_clock.html"
+      name="left"
+      width="600"
+      height="150"
+     ></iframe>
+    </footer>
+
+</body>
+
+</html>
